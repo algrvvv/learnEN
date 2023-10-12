@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="inputbox">
-                            <input required="required" type="text" name="{{$word->id}} autocomplete="off"">
+                            <input required="required" type="text" name="{{$word->id}}" autocomplete="off">
                             <span>Russian word</span>
                             <i></i>
                         </div>
