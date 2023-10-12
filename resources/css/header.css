@@ -21,7 +21,7 @@ header {
     /* 150% */
 }
 
-.nav-links a:hover{
+.nav-links a span:hover{
     color: white;
     text-decoration: underline;
 }

@@ -67,11 +67,11 @@
     <div class="logo-r">
         <nav>
             <ul>
-                {{-- <li class="nav-links"><a href="#">Discover initiatives</a></li> --}}
-                <li class="nav-links"><a href="#">Dictionary</a></li>
-                <li class="nav-links"><a href="#">Learning</a></li>
-                <li class="nav-links"><a href="{{ route('quiz.home') }}">Quiz</a></li>
-                <li class="nav-links"><a href="#">FAQ</a></li>
+                <li class="nav-links"><a href="#"><span>Add new words</span> |</a></li>
+                <li class="nav-links"><a href="#"><span>Dictionary</span> |</a></li>
+                <li class="nav-links"><a href="#"><span>Learning</span> |</a></li>
+                <li class="nav-links"><a href="{{ route('quiz.home') }}"><span>Quiz</span> |</a></li>
+                <li class="nav-links"><a href="#"><span>FAQ</span></a></li>
             </ul>
 
             <button class="button-classic">Apply for grant</button>
