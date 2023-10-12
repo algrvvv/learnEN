@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'Acrom';
+    src: url('../../public/font/Acrom-Medium.ttf');
+}
+
+:root {
+    --text-icon-secondary: #C8C7D8;
+    --btn: #6966FF;
+    --bg: #1C1C28;
+    --bg-sec: #393953;
+    --base: #FFFFFF;
+    --text: #C8C7D8;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Space Mono;
+}
+
+body {
+    background: var(--bg);
+    color: var(--base);
+}
+
+body>.main-title {
+    background: url(../../public/bg.svg), var(--bg);
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-title {
+    color: var(--base);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    letter-spacing: -0.88px;
+}
+
+.text {
+    color: var(--text);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 133.333% */
+    letter-spacing: -0.252px;
+}
+
+.button-classic {
+    transition: all 0.3s ease-in-out;
+    color: var(--base);
+    text-align: center;
+    font-family: Acrom;
+
+    border-radius: 7.29px;
+    background: var(--btn);
+    outline: none;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.button-classic:hover{
+    background: var(--bg-sec);
+}
+
+.button-second {
+    transition: all 0.3s ease-in-out;
+    color: var(--base);
+    text-align: center;
+    font-family: Acrom;
+
+    border-radius: 7.29px;
+    ;
+    background: var(--bg-sec);
+    outline: none;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.button-second:hover{
+    background: var(--btn);
+}
+
+.links {
+    color: var(--btn);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 133.333% */
+    letter-spacing: -0.252px;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+}
+
+.main-title {
+    width: 808px;
+}
+
+.title {
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 88px;
+    /* 110% */
+    letter-spacing: -1.76px;
+    margin-bottom: 40px;
+}
+
+.div-btn>* {
+    margin: 0 25px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section small:nth-child(1) {
+    color: var(--base);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 160% */
+}
+
+.section small:nth-child(2) {
+    color: var(--text);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Desktop/Mono Paragraph Large */
+    font-family: Space Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 133.333% */
+}
+
+.div-for-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-for-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.wrap-text {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.wrap-text .text {
+    margin-top: 15px;
+}
+
+/* .bg-svg {
+    width: 100%;
+    fill: #5C5C76;
+    opacity: 0.5;
+    height: 100%;
+} */
