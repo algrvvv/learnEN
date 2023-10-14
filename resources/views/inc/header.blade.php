@@ -67,7 +67,7 @@
     <div class="logo-r">
         <nav>
             <ul>
-                <li class="nav-links"><a href="#"><span>Add new words</span> |</a></li>
+                <li class="nav-links"><a href="{{route('add.index')}}"><span>Add new words</span> |</a></li>
                 <li class="nav-links"><a href="{{route('dict.index')}}"><span>Dictionary</span> |</a></li>
                 {{-- <li class="nav-links"><a href="#"><span>Learning</span> |</a></li> --}}
                 <li class="nav-links"><a href="{{ route('quiz.home') }}"><span>Quiz</span> |</a></li>

@@ -1,0 +1,34 @@
+/* modal styles */
+
+.div-success {
+    position: fixed;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #bbf7d0;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.div-errors {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    background: #fca5a5;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.div-success p {
+    color: #65a30d;
+}
+
+.div-errors p {
+    color: #dc2626;
+}

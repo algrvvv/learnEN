@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnwController;
 use App\Http\Controllers\DictionaryController;
 use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,9 @@ Route::get('/quiz/game/', [QuizController::class, 'show'])->name('quiz.word');
 Route::get('/quiz/game/res', [QuizController::class, 'check'])->name('quiz.res');
 
 // Dictionary
-
 Route::get('/dict', [DictionaryController::class, 'index'])->name('dict.index');
+
+// add new words
+
+Route::get('/add', [AnwController::class, 'index'])->name('add.index');
+Route::post('/add', [AnwController::class, 'store'])->name('add.store');

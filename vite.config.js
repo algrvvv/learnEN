@@ -8,6 +8,7 @@ export default defineConfig({
                 'resources/js/app.js', 'resources/js/table.search.js',
                 'resources/css/app.css', 'resources/css/header.css', 'resources/css/quiz.css', 
                 'resources/css/quizGame.css','resources/css/result.css', 'resources/css/dict.index.css',
+                'resources/css/anw.index.css', 'resources/css/message.css',
             ],
             refresh: true,
         }),

@@ -77,7 +77,7 @@ body>.main-title {
 }
 
 .button-classic:hover{
-    background: var(--bg-sec);
+    background: #5958b6;
 }
 
 .button-second {

@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <link rel="icon" href="x.png" type="image/x-icon">
-    @vite(['resources/css/app.css'])
+    @vite(['resources/css/app.css','resources/css/message.css'])
     @stack('styles')
 </head>
 <body>
+    @include('message')
     @include('inc.header')
     @yield('content')
     @stack('scripts')
