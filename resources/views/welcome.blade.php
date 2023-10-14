@@ -5,11 +5,11 @@
 @section('content')
     <div class="main-title">
         <h1 class="title">
-            Powering the future of dYdX through community grants
+            Learn and practice your English language skills
         </h1>
         <div class="div-btn">
         <button class="button-second">Discover RFPs</button>
-            <button class="button-classic">Apply for grant</button>
+            <button class="button-classic">Start learning</button>
         </div>
     </div>
 
