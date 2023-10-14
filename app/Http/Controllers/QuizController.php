@@ -44,25 +44,21 @@ class QuizController extends Controller
         $req = $request->all();
 
         foreach ($req as $key => $val) {
-            $corr = explode(',', Word::where('id', $key)->value('rus'));
+            $corr = explode(',', str_replace(' ', '', Word::where('id', $key)->value('rus')));
             $note = Word::where('id', $key)->value('note');
             $example = Word::where('id', $key)->value('example');
             $corr_eng = implode(', ',explode(',', Word::where('id', $key)->value('eng')));
             $corr_str = implode(', ', $corr);
 
+            // implode() - объединение массива в строку
+            // explode() - разбивает строку и добавляет в массив
+            
             if (in_array($val, $corr)) {
                 $answer[$key] = ['true', $corr_eng, request($key), $corr_str, $note, $example];
             } else {
                 $answer[$key] = ['false', $corr_eng, request($key), $corr_str, $note, $example];
             }
         }
-
-        // if($answer[3] === true){
-        // return response()->json([
-        //     // 'ans' => $req
-        //     'a' => $answer[1][0]
-        // ]);
-        // }
 
         return view('pages.quiz.result', [
             'words' => $answer
