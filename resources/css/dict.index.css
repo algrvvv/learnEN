@@ -87,7 +87,7 @@ h1 {
 
 table {
     display: block;
-    background-color: #2C3845;
+    background-color: #393953;
 }
 
 tr,
@@ -129,9 +129,9 @@ th {
 }
 
 thead th {
-    background-color: #202932;
+    background-color: #212138;
     color: #fff;
-    border: 1px solid #202932;
+    border: 1px solid #212138;
 }
 
 tfoot th {
@@ -211,7 +211,7 @@ tfoot th {
     }
 
     tr:nth-child(2n+2) td {
-        background-color: #242e39;
+        background-color: #212138;
     }
 
     tfoot th {
