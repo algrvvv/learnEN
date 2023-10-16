@@ -7,7 +7,7 @@
 
 @section('content')
 
-    {{-- 
+{{-- 
     Индексы данных:
     0 - true / false
     1 - начальное слово
@@ -32,5 +32,15 @@
                 @endif
             </small>
         @endforeach
+
+        
+
+        <div class="results">
+            Our results: <span class="{{$class}}">{{$correct}}  / {{$all}}</span>
+            <hr>
+        </div>
+
+        <a href="{{route('quiz.home')}}" class="button-classic" style="text-decoration: none">Try again</a>
+
     </div>
 @endsection

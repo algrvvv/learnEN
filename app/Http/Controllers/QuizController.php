@@ -40,11 +40,22 @@ class QuizController extends Controller
 
     public function check(Request $request)
     {
+        // Индексы данных:
+        // 0 - true / false
+        // 1 - начальное слово
+        // 2 - слово, которое ввел пользователь
+        // 3 - правльный перевод
+        // 4 - заметка
+        // 5 - пример
+
         $answer = [];
         $req = $request->all();
+        $correct_answer_count = 0;
+        $all_words_count = 0;
 
         foreach ($req as $key => $val) {
-            $corr = explode(',', str_replace(' ', '', Word::where('id', $key)->value('rus')));
+            $corr = explode(',', str_replace(', ', ',', Word::where('id', $key)->value('rus'))); // [приветпока] ->  [привет,пока]
+            // $corr = [str_replace(',', ' ', Word::where('id', $key)->value('rus'))];
             $note = Word::where('id', $key)->value('note');
             $example = Word::where('id', $key)->value('example');
             $corr_eng = implode(', ',explode(',', Word::where('id', $key)->value('eng')));
@@ -55,13 +66,23 @@ class QuizController extends Controller
             
             if (in_array($val, $corr)) {
                 $answer[$key] = ['true', $corr_eng, request($key), $corr_str, $note, $example];
+                $correct_answer_count += 1;
+                $all_words_count += 1;
             } else {
+                $all_words_count += 1;
                 $answer[$key] = ['false', $corr_eng, request($key), $corr_str, $note, $example];
             }
         }
 
+        // return response()->json([
+        //     'words' => $answer
+        // ]);
+
         return view('pages.quiz.result', [
-            'words' => $answer
+            'words' => $answer,
+            'correct' => $correct_answer_count,
+            'all' => $all_words_count,
+            'class' => ($all_words_count * 0.5 <= $correct_answer_count) ? 'correct' : 'wrong'
         ]);
     }
 }
